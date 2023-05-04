@@ -1,0 +1,98 @@
+1. Console.Firebase  ->  build  --> Hosting --> Get Started --> Next --> 
+
+2. firebase Login ruuning in cmd
+
+3. fitebase init  in cmd
+	-y
+	(*) Hosing: COnfigure files for firebase Hosting and Optionally set up Github action deploys (Space Bar Press)
+	> Use an Existing Project
+	> Select the Project
+	> What do you want to use as your public directory?	> build 
+	>Configure as a single page application?	yes
+	> Set Up Automatic deploys with Github? No
+
+	
+
+
+4. Now we have run in cmd   > npm run build 
+5. cmd > firebase deploy
+
+
+
+if once deploye the server then just only two commands have to change
+>npm run build
+>firebase deploy
+
+
+
+
+
+
+
+
+
+Server Side Deploy (Vercel)
+----------------------------
+In server side folder Cmd
+
+1> npm i -g vercel
+> vercel       (in cmd then we have to permission to login)
+ > then want to scope and they suggest them you should press enter
+> Link to Existing Project? No
+>What is your project Name? 		(kinbaanaki-backend)
+>In which directroy is your code located? ./
+> Want to modify these settings? N
+
+
+2. in pachkage.json file there have an command after "start file" ---- "build":"node index.js"
+
+
+
+3. in create vercel.json file and paste the following codes.....
+
+vercel.json 
+----------
+
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "./index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
+
+
+4. Then vercel.com in dashboard existing project we have to add Enviroment Variabales 
+
+
+  
+ if the get /products will not work it will be in backend "client.connect()"  before the await is removed
+ 
+
+
+
+
+
+
+Fixing  Firebase Deploy
+
+--- firebase logout
+--- firebase login
+
+
+
+and firebase install in powershell
+
+
+----------------------------------------------------------------------------------------
+If i have another git but i want to push old git repository so that is following
+git remote -v
+git remote set-url origin (repository Link) 
