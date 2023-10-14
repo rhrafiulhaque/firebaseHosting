@@ -120,6 +120,27 @@ vercel.json থেকে server path ta dist/yourServerFileName.js করবে�
 
 
 
+Mongoose এর ক্ষেত্রে নিচের 
+vercel.json কপি পেষ্ট করতে হবে---
+----------------------------------
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "src/server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/server.js"
+        }
+    ]
+}
+
+
+
 
 Fixing  Firebase Deploy
 
