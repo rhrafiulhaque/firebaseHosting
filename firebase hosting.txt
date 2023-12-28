@@ -156,3 +156,55 @@ and firebase install in powershell
 If i have another git but i want to push old git repository so that is following
 git remote -v
 git remote set-url origin (repository Link) 
+
+
+If I have my project from my two computer then how i clone and changes to commit the steps are below-
+Step 1: Clone the Repository
+bash
+Copy code
+# Clone the repository to your local machine
+git clone https://github.com/rhrafiulhaque/pantavatpro-backend.git
+
+# Change into the repository directory
+cd pantavatpro-backend
+Step 2: Make Changes
+Make the necessary changes to the code or files in your local repository using your preferred code editor.
+
+Step 3: Add and Commit Changes
+bash
+Copy code
+# Stage the changes
+git add .
+
+# Commit the changes with a meaningful commit message
+git commit -m "Update something in the project"
+Step 4: Fetch Remote Changes
+Before pushing your changes, it's a good practice to fetch and merge any changes from the remote repository to avoid conflicts.
+
+bash
+Copy code
+# Fetch changes from the remote repository
+git fetch origin
+
+# Merge the changes into your local branch
+git merge origin/main
+Step 5: Resolve Conflicts (if any)
+If there are any merge conflicts, Git will notify you. Resolve conflicts in your code and then continue the merge:
+
+bash
+Copy code
+# Resolve conflicts and stage the changes
+git add .
+
+# Continue the merge process
+git merge --continue
+Step 6: Push Changes to the Remote Repository
+bash
+Copy code
+# Push your changes to the remote repository
+git push origin main
+Now, your changes should be reflected in the remote repository. If there were conflicts, make sure they are resolved appropriately before pushing.
+
+This sequence of commands covers the basic workflow of cloning, making changes, and pushing them back to a remote repository. Adjust the branch names as needed based on the structure of the repository.
+
+
